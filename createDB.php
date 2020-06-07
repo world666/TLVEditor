@@ -1,6 +1,7 @@
 <?php 
-echo "<p>hello world</p>";
-$mysqli = new mysqli("localhost", "pi", "andrey3828016", "pi");
+include 'config.php';
+
+$mysqli = new mysqli($dbIPAddr, $dbUser, $dbPassword, $dnName);
 if ($mysqli->connect_errno) {
     echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
